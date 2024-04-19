@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model formCadastroAzure.tbl_Cadastro
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <div>
+        <label for="Nome">Nome:</label>
+        @Html.TextBoxFor(m => m.Nome)
+        @Html.ValidationMessageFor(m => m.Nome)
+    </div>
+
+    <div>
+        <label for="Celular">Celular:</label>
+        @Html.TextBoxFor(m => m.Celular)
+        @Html.ValidationMessageFor(m => m.Celular)
+    </div>
+
+    <div>
+        <label for="Pais">País:</label>
+        @Html.TextBoxFor(m => m.Pais)
+        @Html.ValidationMessageFor(m => m.Pais)
+    </div>
+
+    <div>
+        <label for="Cidade">Cidade:</label>
+        @Html.TextBoxFor(m => m.Cidade)
+        @Html.ValidationMessageFor(m => m.Cidade)
+    </div>
+
+    <div>
+        <label for="Estado">Estado:</label>
+        @Html.TextBoxFor(m => m.Estado)
+        @Html.ValidationMessageFor(m => m.Estado)
+    </div>
+
+    <input type="submit" value="Cadastrar" />
+}
